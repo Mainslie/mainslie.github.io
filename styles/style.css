@@ -1,0 +1,266 @@
+/* UNIVERSAL */
+
+:root {
+    --orange: #ff9633;
+    --darkblue: #2e4c5b;
+    --blue: #5296a5;
+    --lightblue: #82ddf0;
+    --lightgray: #f1f1f1;
+    --white: #ffffff;
+    --darkorange: #ff5100;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    text-align: center;
+    max-width: 100vw;
+    height: 100vh;
+    font-size: 24px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    background: var(--darkblue);
+    color: var(--white);
+}
+
+#myDiv {
+    transition: all 0.5s ease;
+}
+
+.color-white {
+    background-color: var(--white);
+}
+
+hr {
+    margin: 40px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+}
+
+.box {
+    flex: 1;
+    min-height: 50%;
+    max-height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+
+.container:nth-child(even) {
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 60px;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+span {
+    font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+p {
+    padding: 60px;
+    font-size: 2rem;
+}
+
+.button {
+    background: linear-gradient(
+        to bottom right,
+        var(--darkorange),
+        var(--orange)
+    );
+    border: 0;
+    border-radius: 12px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    margin: 40px;
+    text-transform: capitalize;
+}
+
+.button:not([disabled]):focus {
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+        -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+        0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+        -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+        0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.image-container {
+    object-fit: contain;
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#circle-image {
+    border-radius: 50%;
+    height: auto;
+    width: 80%;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        flex-direction: row-reverse;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .container:nth-child(even) {
+        flex-direction: row;
+    }
+
+    h1 {
+        font-size: 3rem;
+        padding: none;
+    }
+    span {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+    .image-container {
+        object-fit: contain;
+        height: 100%;
+        width: auto;
+    }
+
+    #planets {
+        height: 70%;
+    }
+
+    #circle_image {
+        height: 50%;
+    }
+}
+
+/* COLOR SCHEMES */
+
+.blue-variant {
+    background: var(--darkblue);
+    color: var(--white);
+}
+
+.white-variant {
+    background: var(--white);
+    color: var(--darkblue-);
+}
+
+.gray-variant {
+    background: var(--lightgray);
+    color: var(--darkblue);
+}
+
+/* ABOUT SECTION */
+
+.about {
+    max-height: 100%;
+}
+
+/*Projects*/
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+}
+
+img.projects {
+    padding: 60px;
+}
+/* Form */
+
+form {
+    padding: 40px;
+}
+
+.contact-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    background-color: var(--blue);
+    margin: 10px auto;
+    padding: 15px;
+    border: none;
+    color: var(--white);
+    width: 70vw;
+    outline: 0;
+    font-size: 2rem;
+}
+
+::placeholder {
+    color: var(--white);
+}
+
+.text-area {
+    padding-bottom: 100px;
+}
+
+.contact-container {
+    min-height: 100%;
+}
+
+@media (min-width: 1200px) {
+    .contact-input {
+        width: 30vw;
+        font-size: 1rem;
+    }
+}
